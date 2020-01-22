@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Mono&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,15 +49,48 @@ table {
 	border-spacing: 0;
 }
 
+@main-color:#49636d;
+@hover-color:#80979d;
+@main-font:'PT Mono', monospace;
+@title-font:'Open Sans Condensed', sans-serif;
+.mainBorder(){
+	border:1px red solid;
+}
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
 	
 }
 
-html, body {
-    height: 100%;
-}
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+} 
+*, *:before, *:after {
+	box-sizing: inherit;
+  }
 
-/*variables */
-@brdr: 1px black solid; 
+  body{
+	font-family:@main-font;
+}
+h1, h2, h3, h4, h5 {
+	
+	font-family:@title-font;
+  }
+p{
+	font-size: 16pt;
+}
+// nesting
+.container{
+	.mainBorder
+}
+.mainHead{
+	h1{
+		font-size: 5rem;
+		padding: 5% 0;
+		.mainBorder;
+		width:max-content;
+		height:max-content;
+	}
+	
+}

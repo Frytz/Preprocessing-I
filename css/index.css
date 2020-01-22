@@ -2,6 +2,20 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v7/9oRONYoBnWILk-9AnC8zNg.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -130,35 +144,35 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
-  height: 100%;
+  font-family: 'PT Mono', monospace;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+p {
+  font-size: 16pt;
+}
+.container {
   border: 1px red solid;
-  margin: 0 3%;
 }
-h1{
-  font-size:68.2%;
-}
-.navBar{
+.mainHead h1 {
+  font-size: 5rem;
+  padding: 5% 0;
   border: 1px red solid;
-  width:100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-}
-.links {
-  border: 1px black solid;
-  width:50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.navBar a{
-  border: 1px red solid;
-  text-decoration: none;
-  color: black;
-}
-.title h1{
-  font-size: 3rem;
+  width: max-content;
+  height: max-content;
 }
