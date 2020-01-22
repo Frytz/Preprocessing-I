@@ -81,16 +81,23 @@ p{
 	font-size: 16pt;
 }
 // nesting
-.container{
+.container *{
 	.mainBorder
 }
 .mainHead{
 	h1{
 		font-size: 5rem;
 		padding: 5% 0;
-		.mainBorder;
 		width:max-content;
 		height:max-content;
+		text-decoration: bold;
+		font-weight: bold;
 	}
-	
 }
+.links{ 
+	width: 50%;
+	a{
+	text-decoration: none;
+	color:black;
+ }// close a
+ }// closes links

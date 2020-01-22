@@ -166,13 +166,21 @@ h5 {
 p {
   font-size: 16pt;
 }
-.container {
+.container * {
   border: 1px red solid;
 }
 .mainHead h1 {
   font-size: 5rem;
   padding: 5% 0;
-  border: 1px red solid;
   width: max-content;
   height: max-content;
+  text-decoration: bold;
+  font-weight: bold;
+}
+.links {
+  width: 50%;
+}
+.links a {
+  text-decoration: none;
+  color: black;
 }
