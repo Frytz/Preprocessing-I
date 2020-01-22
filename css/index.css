@@ -133,5 +133,32 @@ table {
 html,
 body {
   height: 100%;
+  border: 1px red solid;
+  margin: 0 3%;
 }
-/*variables */
+h1{
+  font-size:68.2%;
+}
+.navBar{
+  border: 1px red solid;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.links {
+  border: 1px black solid;
+  width:50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navBar a{
+  border: 1px red solid;
+  text-decoration: none;
+  color: black;
+}
+.title h1{
+  font-size: 3rem;
+}
