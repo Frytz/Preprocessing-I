@@ -180,7 +180,6 @@ p {
 }
 .mainHeader {
   background-color: silver;
-  border-bottom: 1px black solid;
 }
 .navBar {
   box-sizing: border-box;
@@ -218,7 +217,8 @@ p {
   }
 }
 img {
-  width: 50% ;
+  width: 65%;
+  padding: 4%;
 }
 .title {
   padding: 5% 0;
