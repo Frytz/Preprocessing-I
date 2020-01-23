@@ -210,29 +210,29 @@ p {
     justify-content: space-between;
   }
 }
-.mainHeader {
+.mainHead .navBar {
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: blue;
+  align-items: center;
+  text-align: center;
 }
-.mainHeader img {
-  width: 50%;
+.mainHead .navBar .links a {
+  display: flex;
+  padding: 5% 0;
+  background-color: red;
 }
-.title .headTitle {
-  width: 100%;
-  font-size: 8rem;
-  font-weight: bolder;
-  padding: 2% 0;
-}
-@media (max-width: 900px) {
-  .title .headTitle {
-    font-size: 6rem;
+@media (min-width: 500px) {
+  .mainHead .navBar .links a .navBar {
+    background-color: orange;
+    flex-direction: row;
+    justify-content: center;
   }
 }
-@media (max-width: 900px) and (max-width: 500px) {
-  .title .headTitle {
-    font-size: 4rem;
-  }
-  .title .headTitle p {
-    font-size: 12rem;
+@media (min-width: 500px) and (min-width: 900px) {
+  .mainHead .navBar .links a .navBar {
+    justify-content: flex-end;
   }
 }
