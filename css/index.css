@@ -123,7 +123,11 @@ body {
 }
 ol,
 ul {
+  font-size: 16px;
   list-style: none;
+}
+li {
+  border: 1px black solid;
 }
 blockquote,
 q {
@@ -244,4 +248,38 @@ img {
 }
 .b1 {
   padding: 2%;
+}
+h3 {
+  font-size: 3rem ;
+}
+#aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 500px) {
+  #aboutMe {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.about {
+  border: 1px black solid;
+  padding: 2%;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  .about {
+    width: 49%;
+  }
+}
+.skill {
+  border: 1px red solid;
+  padding: 2%;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  .skill {
+    width: 49%;
+  }
 }
