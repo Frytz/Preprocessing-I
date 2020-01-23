@@ -162,15 +162,25 @@ h2,
 h3,
 h4,
 h5 {
-  font-size: 16px;
+  font-size: 10px;
+  font-weight: bolder;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 p {
   font-family: 'PT Mono', monospace;
-  font-size: 62.5%;
+  font-size: 16px;
+}
+@media (min-width: 500px) {
+  p {
+    font-size: 1.5rem;
+  }
 }
 .container {
   box-sizing: border-box;
+}
+.mainHeader {
+  background-color: silver;
+  border-bottom: 1px black solid;
 }
 .navBar {
   box-sizing: border-box;
@@ -206,4 +216,37 @@ p {
   .navBar .links a {
     justify-content: space-evenly;
   }
+}
+img {
+  width: 50% ;
+}
+.title {
+  padding: 5% 0;
+}
+@media (min-width: 500px) {
+  .title {
+    padding: 2% 0;
+  }
+}
+.title h1 {
+  font-size: 4rem;
+  padding: 5% 0;
+}
+@media (min-width: 500px) {
+  .title h1 {
+    font-size: 6rem;
+    padding: 2% 0;
+  }
+}
+@media (min-width: 900px) {
+  .title h1 {
+    font-size: 8rem;
+    padding: 2% 0;
+  }
+}
+.desc {
+  padding-bottom: 2%;
+}
+.b1 {
+  padding: 2%;
 }
