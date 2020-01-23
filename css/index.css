@@ -202,7 +202,7 @@ p {
 @media (min-width: 500px) {
   .navBar .links {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 .navBar .links a {
@@ -210,11 +210,6 @@ p {
   padding: 2% 0;
   color: black;
   font-size: 1.5rem;
-}
-@media (min-width: 500px) {
-  .navBar .links a {
-    justify-content: space-evenly;
-  }
 }
 img {
   width: 65%;
