@@ -54,7 +54,8 @@ table {
 @main-font:'PT Mono', monospace;
 @title-font:'Open Sans Condensed', sans-serif;
 .mainBorder(){
-	border:1px red solid;
+	border:1px black solid;
+	
 }
 /* Set every element's box-sizing to border-box */
 * {
@@ -72,33 +73,88 @@ html {
 
   body{
 	font-family:@main-font;
+	margin:0 5%;
 }
-h1, h2, h3, h4, h5 {
-	
+
+h1,h2, h3, h4, h5 {
+	font-size: 16px;
 	font-family:@title-font;
   }
 p{
-	font-size: 16pt;
+	font-family: @main-font;
+	font-size: 62.5%;
 }
 // nesting
-.container *{
-	.mainBorder
+.container {
+	box-sizing: border-box
+	
 }
+
 .mainHead{
-	h1{
-		font-size: 5rem;
-		padding: 5% 0;
-		width:max-content;
-		height:max-content;
-		text-decoration: bold;
-		font-weight: bold;
+
+.navBar{
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	// background-color: red;
+	justify-content: center;
+	text-align: center;
+	@media (min-width: 500px){
+		flex-direction: row;	
+		justify-content: center;
+		}
+	@media (min-width: 900px){
+		justify-content: flex-end;
+		}
+		
+		.links{ 
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+	// .mainBorder;
+	a{
+		text-decoration: none;
+		padding: 2% 0;
+		color:black;
+		font-size: 1.5rem;
+	}
+	
+	@media (min-width: 500px) {
+		flex-direction: row;
+		justify-content:space-between;
+			}// closes a
+		} // links
+	}// close navBar
+}// mainhead
+
+ .mainHeader{
+	
+	display:flex;
+	flex-direction: column;
+	img{
+		width: 50%; 
+	}//closes title
+	}//headerImg
+	//closes mainHeader
+	.title{
+			.headTitle{
+			width: 100%;
+			font-size: 8rem;
+			font-weight: bolder;
+			padding: 2% 0;
+	@media (max-width: 900px) {
+		font-size: 6rem;
+	
+	@media (max-width: 500px) {
+		font-size: 4rem;
+		p{
+			font-size: 12rem;
+		}
+	}	
 	}
 }
-.links{ 
-	width: 50%;
-	a{
-	text-decoration: none;
-	color:black;
- }// close a
- }// closes links
-//  
+	}
+	
+
+
