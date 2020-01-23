@@ -96,7 +96,7 @@ p{
 	box-sizing: border-box;
 	width: 100%;
 	display: flex;
-	// background-color: red;
+	background-color: red;
 	justify-content: center;
 	text-align: center;
 	@media (min-width: 500px){
@@ -108,11 +108,11 @@ p{
 		}
 		
 		.links{ 
-	width: 80%;
+	width:max-content;
 	display: flex;
 	flex-direction: column;
 	justify-content:space-evenly;
-	// .mainBorder;
+	.mainBorder;
 	a{
 		text-decoration: none;
 		padding: 2% 0;
@@ -121,7 +121,7 @@ p{
 	}
 	
 	@media (min-width: 500px) {
-		flex-direction: row;
+		flex-direction: column;
 		justify-content:space-between;
 			}// closes a
 		} // links
