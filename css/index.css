@@ -172,67 +172,38 @@ p {
 .container {
   box-sizing: border-box;
 }
-.mainHead .navBar {
+.navBar {
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  background-color: red;
   justify-content: center;
   text-align: center;
 }
-@media (min-width: 500px) {
-  .mainHead .navBar {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
 @media (min-width: 900px) {
-  .mainHead .navBar {
+  .navBar {
     justify-content: flex-end;
   }
 }
-.mainHead .navBar .links {
-  width: max-content;
+.navBar .links {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 1px black solid;
 }
-.mainHead .navBar .links a {
+@media (min-width: 500px) {
+  .navBar .links {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.navBar .links a {
   text-decoration: none;
   padding: 2% 0;
   color: black;
   font-size: 1.5rem;
 }
 @media (min-width: 500px) {
-  .mainHead .navBar .links {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-}
-.mainHead .navBar {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: blue;
-  align-items: center;
-  text-align: center;
-}
-.mainHead .navBar .links a {
-  display: flex;
-  padding: 5% 0;
-  background-color: red;
-}
-@media (min-width: 500px) {
-  .mainHead .navBar .links a .navBar {
-    background-color: orange;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-@media (min-width: 500px) and (min-width: 900px) {
-  .mainHead .navBar .links a .navBar {
-    justify-content: flex-end;
+  .navBar .links a {
+    justify-content: space-evenly;
   }
 }
