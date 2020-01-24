@@ -52,7 +52,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+@sil-col:silver;
+@mail-color:#7CFC00;
 @main-color:#49636d;
 @hover-color:#80979d;
 @main-font:'PT Mono', monospace;
@@ -92,17 +93,11 @@ p{
 		font-size: 1.5rem;
 	}//closes p media
 }//closes p
+
 // nesting
 .container {
 	box-sizing: border-box
-	
 }
-
-.mainHeader{
-	background-color: silver;
-
-}//closes main head
-
 .navBar{
 box-sizing: border-box;
 width: 100%;
@@ -110,11 +105,9 @@ display: flex;
 //background-color: red;
 justify-content: center;
 text-align: center;
-
 @media (min-width: 900px){
 	justify-content: flex-end;
 	}
-	
 	.links{ 
 width:80%;
 display: flex;
@@ -130,18 +123,17 @@ a{
 	padding: 2% 0;
 	color:black;
 	font-size: 1.5rem;
-	
-		
-	}//closes media
-}// closes a
-} //closes links
-// close navBar
-
-
-img{
+		}// closes a
+	}//closes links
+} // close navBar
+.mainHeader{
+	background-color: @sil-col;
+	img{
 		width:65%;
 		padding:4%;
-}//closes img
+		
+	}//closes img
+}//closes main head
 .title{
 	// .mainBorder;
 	padding: 5% 0;
@@ -162,16 +154,10 @@ img{
 	}//closes h1	
 }//closes title
 .desc{
-	//
 	padding-bottom: 2%;
-}
 .b1{
 	padding:2%;
-}
-// content
-h3{
-	
-	font-size:3rem ;
+	}
 }
 #aboutMe{
 	display: flex;
@@ -181,15 +167,32 @@ h3{
 		flex-direction: row;
 		justify-content: space-between;
 	}// closes media
-	
 	.about, .skill{
-		 .mainBorder;
+		//  .mainBorder;
 		padding:2%;
 		width:100%;
-		@media (min-width:500px){
+		@media (min-width: 500px){
 			width:49%;	
 		}// closes media
+	h3{
+		font-size: 3rem;
+		padding-bottom: 2%;
 	}//closes about// closes skills
+	.smallText{
+		font-size:1.2rem;
+		@media (min-width: 500px){
+			font-size: 1.5rem;
+			}
+		}
+	}
 }//closes aboutMe
-
-
+footer{
+	font-size:2rem;
+	@media (min-width: 500px){
+	font-size:3rem;
+	}
+	a{
+		text-decoration: none;
+		color:@mail-color;
+	}
+}
