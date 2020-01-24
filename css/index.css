@@ -263,23 +263,15 @@ h3 {
     justify-content: space-between;
   }
 }
-.about {
+#aboutMe .about,
+#aboutMe .skill {
   border: 1px black solid;
   padding: 2%;
   width: 100%;
 }
 @media (min-width: 500px) {
-  .about {
-    width: 49%;
-  }
-}
-.skill {
-  border: 1px red solid;
-  padding: 2%;
-  width: 100%;
-}
-@media (min-width: 500px) {
-  .skill {
+  #aboutMe .about,
+  #aboutMe .skill {
     width: 49%;
   }
 }
