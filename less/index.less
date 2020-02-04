@@ -17,11 +17,11 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -30,8 +30,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+// .container *{ 
+// 	border: 1px red solid;
+// }
 body {
-	line-height: 1;
+	line-height: 2rem;
 }
 ol, ul {
 	font-size: 16px;
@@ -52,12 +55,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+// variables
 @sil-col:silver;
 @mail-color:#7CFC00;
 @main-color:#49636d;
 @hover-color:#80979d;
 @main-font:'PT Mono', monospace;
 @title-font:'Open Sans Condensed', sans-serif;
+@tablet: ~'(min-width: 500px)';
+@desk: ~'(min-width: 900px)';
+
+// mixins
+.flex-column(){
+	display: flex;
+	flex-direction: column;
+}
 .mainBorder(){
 	border:1px black solid;
 	
@@ -70,7 +82,6 @@ table {
 
 html {
 	box-sizing: border-box;
-	font-size: 62.5%;
 } 
 *, *:before, *:after {
 	box-sizing: inherit;
@@ -81,16 +92,28 @@ html {
 	margin:0 5%;
 }
 
-h1,h2, h3, h4, h5 {
-	font-size:10px;
+h1 {
+	font-size:1.5rem;
 	font-weight: bolder;
 	font-family:@title-font;
-  }
+	@media @tablet {
+		font-size: 2.5rem;
+	}
+}
+h2, h3, h4, h5 {
+	font-size: 1.2rem;
+	font-weight: bolder;
+	font-family: @title-font;
+	@media @tablet {
+		font-size: 2rem;
+	}//closes h2-5 media
+}//closes h2-h5
+
 p{
 	font-family: @main-font;
-	font-size: 16px;
-	@media (min-width: 500px){
-		font-size: 1.5rem;
+	font-size: .75rem;
+	@media @tablet {
+		font-size: 1rem;
 	}//closes p media
 }//closes p
 
@@ -99,59 +122,68 @@ p{
 	box-sizing: border-box
 }
 .navBar{
-box-sizing: border-box;
-width: 100%;
-display: flex;
-//background-color: red;
-justify-content: center;
-text-align: center;
-@media (min-width: 900px){
-	justify-content: flex-end;
-	}
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	//background-color: red;
+	justify-content: center;
+	text-align: center;
+		@media @desk{
+		justify-content: flex-end;
+		}
 	.links{ 
-width:80%;
-display: flex;
-flex-direction: column;
-justify-content:space-evenly;
+	width:50%;
+		
+	.flex-column;
 
-@media (min-width: 500px) {
-	flex-direction: row;
-	justify-content:space-between;
-	}//closes media
-a{
-	text-decoration: none;
-	padding: 2% 0;
-	color:black;
-	font-size: 1.5rem;
-		}// closes a
+			@media @tablet {
+			width: 100%;
+			flex-direction: row;
+			justify-content:space-between;
+			}//closes media
+		a{
+		text-decoration: none;
+		padding: 2% 0;
+		color:black;
+		font-size: 1rem;
+		@media @tablet {
+			font-size: 1.25rem;
+		}	
+		&:hover{
+				color:blue;
+			} // closes a hover
+	}// closes a
 	}//closes links
 } // close navBar
 .mainHeader{
 	background-color: @sil-col;
-	img{
-		width:65%;
-		padding:4%;
-		
+	.img-div{
+		.flex-column;
+		align-items: center;
+	
+		img{
+			width:65%;
+			padding:2%;
+		}	
 	}//closes img
 }//closes main head
 .title{
 	// .mainBorder;
-	padding: 5% 0;
+	padding: 2% 0;
+	text-align: center;
 	@media (min-width: 500px) {
 		padding: 2% 0;
 	}
-	h1{
-		font-size: 4rem;
-		padding: 5% 0;
+		
 		@media (min-width: 500px) {
-			font-size: 6rem;
+			font-size: 4rem;
 			padding: 2% 0;
-		}
+		}// closes tablet media
 		@media (min-width: 900px) {
 			font-size: 8rem;
 			padding: 2% 0;
-		}
-	}//closes h1	
+		
+	}//cleses desk media	
 }//closes title
 .desc{
 	padding-bottom: 2%;
@@ -163,26 +195,25 @@ a{
 	display: flex;
 	flex-direction:column;
 	justify-content:center;
-	@media (min-width: 500px){
-		flex-direction: row;
-		justify-content: space-between;
+	.mainBorder;
+	@media @tablet{
+		.flex-column;
+		width:100%
 	}// closes media
 	.about, .skill{
 		//  .mainBorder;
 		padding:2%;
 		width:100%;
 		@media (min-width: 500px){
-			width:49%;	
+			width:100%;	
 		}// closes media
-	h3{
-		font-size: 3rem;
-		padding-bottom: 2%;
+	
 	}//closes about// closes skills
 	.smallText{
 		font-size:1.2rem;
 		@media (min-width: 500px){
 			font-size: 1.5rem;
-			}
+			
 		}
 	}
 }//closes aboutMe

@@ -100,7 +100,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -119,7 +119,7 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: 2rem;
 }
 ol,
 ul {
@@ -150,7 +150,6 @@ table {
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 *,
 *:before,
@@ -161,22 +160,39 @@ body {
   font-family: 'PT Mono', monospace;
   margin: 0 5%;
 }
-h1,
+h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+@media (min-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
 h2,
 h3,
 h4,
 h5 {
-  font-size: 10px;
+  font-size: 1.2rem;
   font-weight: bolder;
   font-family: 'Open Sans Condensed', sans-serif;
 }
+@media (min-width: 500px) {
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 2rem;
+  }
+}
 p {
   font-family: 'PT Mono', monospace;
-  font-size: 16px;
+  font-size: 0.75rem;
 }
 @media (min-width: 500px) {
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 .container {
@@ -195,13 +211,13 @@ p {
   }
 }
 .navBar .links {
-  width: 80%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 @media (min-width: 500px) {
   .navBar .links {
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -210,35 +226,45 @@ p {
   text-decoration: none;
   padding: 2% 0;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 500px) {
+  .navBar .links a {
+    font-size: 1.25rem;
+  }
+}
+.navBar .links a:hover {
+  color: blue;
 }
 .mainHeader {
   background-color: silver;
 }
-.mainHeader img {
+.mainHeader .img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainHeader .img-div img {
   width: 65%;
-  padding: 4%;
+  padding: 2%;
 }
 .title {
-  padding: 5% 0;
+  padding: 2% 0;
+  text-align: center;
 }
 @media (min-width: 500px) {
   .title {
     padding: 2% 0;
   }
 }
-.title h1 {
-  font-size: 4rem;
-  padding: 5% 0;
-}
 @media (min-width: 500px) {
-  .title h1 {
-    font-size: 6rem;
+  .title {
+    font-size: 4rem;
     padding: 2% 0;
   }
 }
 @media (min-width: 900px) {
-  .title h1 {
+  .title {
     font-size: 8rem;
     padding: 2% 0;
   }
@@ -253,11 +279,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 1px black solid;
 }
 @media (min-width: 500px) {
   #aboutMe {
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 }
 #aboutMe .about,
@@ -268,21 +296,14 @@ p {
 @media (min-width: 500px) {
   #aboutMe .about,
   #aboutMe .skill {
-    width: 49%;
+    width: 100%;
   }
 }
-#aboutMe .about h3,
-#aboutMe .skill h3 {
-  font-size: 3rem;
-  padding-bottom: 2%;
-}
-#aboutMe .about .smallText,
-#aboutMe .skill .smallText {
+#aboutMe .smallText {
   font-size: 1.2rem;
 }
 @media (min-width: 500px) {
-  #aboutMe .about .smallText,
-  #aboutMe .skill .smallText {
+  #aboutMe .smallText {
     font-size: 1.5rem;
   }
 }
