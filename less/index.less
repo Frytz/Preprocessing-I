@@ -25,6 +25,8 @@ time, mark, audio, video, {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -37,8 +39,12 @@ body {
 	line-height: 2rem;
 }
 ol, ul {
-	font-size: 16px;
+	font-size: .75rem;
 	list-style: none;
+
+	@media @tablet {
+		font-size: 1rem;
+	}
 }
 li{
 	.mainBorder();
@@ -70,6 +76,11 @@ table {
 	display: flex;
 	flex-direction: column;
 }
+.flex-row(@wrap){
+	display: flex;
+	flex-direction: row;
+	flex-wrap: @wrap;
+}
 .mainBorder(){
 	border:1px black solid;
 	
@@ -96,27 +107,52 @@ h1 {
 	font-size:1.5rem;
 	font-weight: bolder;
 	font-family:@title-font;
+	padding-bottom: 1%;
 	@media @tablet {
 		font-size: 2.5rem;
+		padding-bottom: 2%;
+	}
+	@media @desk {
+		font-size: 5rem;
+		padding-bottom: 3%;
 	}
 }
-h2, h3, h4, h5 {
+h2, h3,  h5 {
 	font-size: 1.2rem;
 	font-weight: bolder;
 	font-family: @title-font;
+	padding-bottom: 1%;
 	@media @tablet {
 		font-size: 2rem;
+		padding-bottom: 2%;
 	}//closes h2-5 media
-}//closes h2-h5
-
+}//closes headertags
+h4 {
+	font-size: 1rem;
+	font-weight: bolder;
+	font-family: @title-font;
+	padding-bottom: 1%;
+	@media @tablet {
+		font-size: 1.5rem;
+		padding-left: 1%;
+		padding-bottom: 2%;
+	}//closes h2-5 media
+}
 p{
 	font-family: @main-font;
 	font-size: .75rem;
 	@media @tablet {
 		font-size: 1rem;
-	}//closes p media
+	}//closes p media	
 }//closes p
 
+li {
+	padding: 2% 0;
+	font-size: .75rem;
+@media @tablet {
+	font-size: 1rem;
+}
+}
 // nesting
 .container {
 	box-sizing: border-box
@@ -157,29 +193,39 @@ p{
 } // close navBar
 .mainHeader{
 	background-color: @sil-col;
+	align-items: flex-start;	
+}
 	.img-div{
 		.flex-column;
 		align-items: center;
-	
-		img{
+		@media @desk {
+			align-items: flex-start;
+		} //img-div media close
+		.headImg{
 			width:65%;
 			padding:2%;
-		}	
+		@media @desk {
+			width: 49%;
+			
+			
+		}// img desk media close
+			
 	}//closes img
 }//closes main head
 .title{
 	// .mainBorder;
 	padding: 2% 0;
 	text-align: center;
-	@media (min-width: 500px) {
+	@media @tablet {
 		padding: 2% 0;
-	}
+	}// title tablet media close
 		
-		@media (min-width: 500px) {
+		@media @tablet {
 			font-size: 4rem;
 			padding: 2% 0;
 		}// closes tablet media
-		@media (min-width: 900px) {
+		@media @desk {
+			flex-direction: row;
 			font-size: 8rem;
 			padding: 2% 0;
 		
@@ -195,35 +241,75 @@ p{
 	display: flex;
 	flex-direction:column;
 	justify-content:center;
-	.mainBorder;
+	// .mainBorder;
 	@media @tablet{
 		.flex-column;
 		width:100%
-	}// closes media
-	.about, .skill{
+	}// closes tablet  media
+	@media @desk {
+		.flex-row(nowrap);
+	} //about me media desk close
+	.about {
 		//  .mainBorder;
 		padding:2%;
 		width:100%;
-		@media (min-width: 500px){
+		@media @tablet{
 			width:100%;	
-		}// closes media
-	
-	}//closes about// closes skills
-	.smallText{
-		font-size:1.2rem;
-		@media (min-width: 500px){
-			font-size: 1.5rem;
+		}// closes  media tablet
+		@media @desk {
+			width: 60%;
+		}// about media desk close
+		.skill {
+			padding: 1%;
+			width: 100%;
+			@media @desk {
+				width:40%;
 			
-		}
-	}
+			}// closes skill media
+		}//closes skills
+	}//closes about
 }//closes aboutMe
+//mid images
+.mid-sec {
+	box-sizing: border-box;
+	// border: 1px red solid;
+	width: 80%;	
+	display:flex;
+	width: 100%;
+	  .img-1{
+		// border: 1px solid orange;
+		object-fit: contain;
+		width:100%;
+		padding:1%;
+		display:none;
+			@media @desk{
+				display:flex;
+			}//img media close
+		}//img1 close
+	.img-2 {
+		object-fit: contain;
+		width:100%;
+		padding:1%;
+		// border: 1px blue solid;
+		@media @desk{
+			display:none;
+		}//img media close
+	}//img2 close
+}//mid sec close
+
 footer{
-	font-size:2rem;
-	@media (min-width: 500px){
-	font-size:3rem;
+	font-size:.75rem;
+	@media @tablet {
+	font-size:1rem;
 	}
 	a{
+		padding-left: 1%;
 		text-decoration: none;
 		color:@mail-color;
+	
+		&:hover{
+			color: blue;
+		}
+	
 	}
 }

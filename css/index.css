@@ -123,8 +123,14 @@ body {
 }
 ol,
 ul {
-  font-size: 16px;
+  font-size: 0.75rem;
   list-style: none;
+}
+@media (min-width: 500px) {
+  ol,
+  ul {
+    font-size: 1rem;
+  }
 }
 li {
   border: 1px black solid;
@@ -164,26 +170,47 @@ h1 {
   font-size: 1.5rem;
   font-weight: bolder;
   font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 1%;
 }
 @media (min-width: 500px) {
   h1 {
     font-size: 2.5rem;
+    padding-bottom: 2%;
+  }
+}
+@media (min-width: 900px) {
+  h1 {
+    font-size: 5rem;
+    padding-bottom: 3%;
   }
 }
 h2,
 h3,
-h4,
 h5 {
   font-size: 1.2rem;
   font-weight: bolder;
   font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 1%;
 }
 @media (min-width: 500px) {
   h2,
   h3,
-  h4,
   h5 {
     font-size: 2rem;
+    padding-bottom: 2%;
+  }
+}
+h4 {
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 1%;
+}
+@media (min-width: 500px) {
+  h4 {
+    font-size: 1.5rem;
+    padding-left: 1%;
+    padding-bottom: 2%;
   }
 }
 p {
@@ -192,6 +219,15 @@ p {
 }
 @media (min-width: 500px) {
   p {
+    font-size: 1rem;
+  }
+}
+li {
+  padding: 2% 0;
+  font-size: 0.75rem;
+}
+@media (min-width: 500px) {
+  li {
     font-size: 1rem;
   }
 }
@@ -238,15 +274,26 @@ p {
 }
 .mainHeader {
   background-color: silver;
+  align-items: flex-start;
 }
-.mainHeader .img-div {
+.img-div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.mainHeader .img-div img {
+@media (min-width: 900px) {
+  .img-div {
+    align-items: flex-start;
+  }
+}
+.img-div .headImg {
   width: 65%;
   padding: 2%;
+}
+@media (min-width: 900px) {
+  .img-div .headImg {
+    width: 49%;
+  }
 }
 .title {
   padding: 2% 0;
@@ -265,6 +312,7 @@ p {
 }
 @media (min-width: 900px) {
   .title {
+    flex-direction: row;
     font-size: 8rem;
     padding: 2% 0;
   }
@@ -279,7 +327,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px black solid;
 }
 @media (min-width: 500px) {
   #aboutMe {
@@ -288,34 +335,76 @@ p {
     width: 100%;
   }
 }
-#aboutMe .about,
-#aboutMe .skill {
+@media (min-width: 900px) {
+  #aboutMe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+#aboutMe .about {
   padding: 2%;
   width: 100%;
 }
 @media (min-width: 500px) {
-  #aboutMe .about,
-  #aboutMe .skill {
+  #aboutMe .about {
     width: 100%;
   }
 }
-#aboutMe .smallText {
-  font-size: 1.2rem;
+@media (min-width: 900px) {
+  #aboutMe .about {
+    width: 60%;
+  }
 }
-@media (min-width: 500px) {
-  #aboutMe .smallText {
-    font-size: 1.5rem;
+#aboutMe .about .skill {
+  padding: 1%;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  #aboutMe .about .skill {
+    width: 40%;
+  }
+}
+.mid-sec {
+  box-sizing: border-box;
+  width: 80%;
+  display: flex;
+  width: 100%;
+}
+.mid-sec .img-1 {
+  object-fit: contain;
+  width: 100%;
+  padding: 1%;
+  display: none;
+}
+@media (min-width: 900px) {
+  .mid-sec .img-1 {
+    display: flex;
+  }
+}
+.mid-sec .img-2 {
+  object-fit: contain;
+  width: 100%;
+  padding: 1%;
+}
+@media (min-width: 900px) {
+  .mid-sec .img-2 {
+    display: none;
   }
 }
 footer {
-  font-size: 2rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 500px) {
   footer {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 }
 footer a {
+  padding-left: 1%;
   text-decoration: none;
   color: #7CFC00;
+}
+footer a:hover {
+  color: blue;
 }
