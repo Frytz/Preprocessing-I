@@ -1,1 +1,410 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v7/9oRONYoBnWILk-9AnC8zNg.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 2rem;
+}
+ol,
+ul {
+  font-size: 0.75rem;
+  list-style: none;
+}
+@media (min-width: 500px) {
+  ol,
+  ul {
+    font-size: 1rem;
+  }
+}
+li {
+  border: 1px black solid;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'PT Mono', monospace;
+  margin: 0 5%;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 1%;
+}
+@media (min-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+    padding-bottom: 2%;
+  }
+}
+@media (min-width: 900px) {
+  h1 {
+    font-size: 5rem;
+    padding-bottom: 3%;
+  }
+}
+h2,
+h3,
+h5 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 1%;
+}
+@media (min-width: 500px) {
+  h2,
+  h3,
+  h5 {
+    font-size: 2rem;
+    padding-bottom: 2%;
+  }
+}
+h4 {
+  font-size: 1rem;
+  font-weight: bolder;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 1%;
+}
+@media (min-width: 500px) {
+  h4 {
+    font-size: 1.5rem;
+    padding-left: 1%;
+    padding-bottom: 2%;
+  }
+}
+p {
+  font-family: 'PT Mono', monospace;
+  font-size: 0.75rem;
+}
+@media (min-width: 500px) {
+  p {
+    font-size: 1rem;
+  }
+}
+li {
+  padding: 2% 0;
+  font-size: 0.75rem;
+}
+@media (min-width: 500px) {
+  li {
+    font-size: 1rem;
+  }
+}
+.container {
+  box-sizing: border-box;
+}
+.navBar {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 900px) {
+  .navBar {
+    justify-content: flex-end;
+  }
+}
+.navBar .links {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 500px) {
+  .navBar .links {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.navBar .links a {
+  text-decoration: none;
+  padding: 2% 0;
+  color: black;
+  font-size: 1rem;
+}
+@media (min-width: 500px) {
+  .navBar .links a {
+    font-size: 1.25rem;
+  }
+}
+.navBar .links a:hover {
+  color: blue;
+}
+.mainHeader {
+  background-color: silver;
+  align-items: flex-start;
+}
+.img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .img-div {
+    align-items: flex-start;
+  }
+}
+.img-div .headImg {
+  width: 65%;
+  padding: 2%;
+}
+@media (min-width: 900px) {
+  .img-div .headImg {
+    width: 49%;
+  }
+}
+.title {
+  padding: 2% 0;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .title {
+    padding: 2% 0;
+  }
+}
+@media (min-width: 500px) {
+  .title {
+    font-size: 4rem;
+    padding: 2% 0;
+  }
+}
+@media (min-width: 900px) {
+  .title {
+    flex-direction: row;
+    font-size: 8rem;
+    padding: 2% 0;
+  }
+}
+.desc {
+  padding-bottom: 2%;
+}
+.desc .b1 {
+  padding: 2%;
+}
+#aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 500px) {
+  #aboutMe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  #aboutMe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+#aboutMe .about {
+  padding: 2%;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  #aboutMe .about {
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  #aboutMe .about {
+    width: 60%;
+  }
+}
+#aboutMe .about .skill {
+  padding: 1%;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  #aboutMe .about .skill {
+    width: 40%;
+  }
+}
+.mid-sec {
+  box-sizing: border-box;
+  width: 80%;
+  display: flex;
+  width: 100%;
+}
+.mid-sec .img-1 {
+  object-fit: contain;
+  width: 100%;
+  padding: 1%;
+  display: none;
+}
+@media (min-width: 900px) {
+  .mid-sec .img-1 {
+    display: flex;
+  }
+}
+.mid-sec .img-2 {
+  object-fit: contain;
+  width: 100%;
+  padding: 1%;
+}
+@media (min-width: 900px) {
+  .mid-sec .img-2 {
+    display: none;
+  }
+}
+footer {
+  font-size: 0.75rem;
+}
+@media (min-width: 500px) {
+  footer {
+    font-size: 1rem;
+  }
+}
+footer a {
+  padding-left: 1%;
+  text-decoration: none;
+  color: #7CFC00;
+}
+footer a:hover {
+  color: blue;
+}
